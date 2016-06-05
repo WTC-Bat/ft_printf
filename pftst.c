@@ -21,6 +21,7 @@ int		main(void)
 	ft_printf("Percentage:\n\n");
 	ft_printf("Working at %i%%\n", 99);
 	printf("Working at %i%%\n", 99);
+	ft_printf("\n\n\n");
     
 
 	/*
