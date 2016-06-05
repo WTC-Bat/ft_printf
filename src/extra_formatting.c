@@ -26,7 +26,6 @@ char		*fmt_p(t_mods mods, char *out_str)
 		padlen = mods.width - ft_strlen(out_str);
 		pad = (char *)malloc(sizeof(char) * padlen);
 		ft_memset(pad, ' ', padlen);
-		ft_putendl("here");
 		if (mods.flag != '\0')
 		{
 			if (mods.flag != '-')
@@ -52,7 +51,7 @@ char		*fmt_c(t_mods mods, char out_char)
 	tmp_str[0] = out_char;
 	if (mods.width != -1)
 	{
-		padlen = mods.width - 2;
+		padlen = mods.width - 1;
 		new_str = (char *)malloc(sizeof(char) * mods.width);
 		pad = (char *)malloc(sizeof(char) * padlen);
 		ft_memset(pad, ' ', padlen);

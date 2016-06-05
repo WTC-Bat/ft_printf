@@ -26,8 +26,8 @@ char	*handle_p(va_list vlst, t_mods mods)
 	ptr = va_arg(vlst, void *);
 	iptr = (int *)&ptr;
 	out_str = ft_itobase(*iptr, 16);
-	out_str = ft_prependc(out_str, '0');
-	out_str = ft_prependc(out_str, '1');
+	out_str = ft_prependc(out_str, '0');//!
+	out_str = ft_prependc(out_str, '1');//!
 	out_str = ft_prependc(out_str, 'x');
 	out_str = ft_prependc(out_str, '0');
 	out_str = ft_strlower(out_str);
