@@ -73,11 +73,9 @@ char		*fmt_c(t_mods mods, char out_char)
 static char	*init_new_str(char *tmp_str, t_mods mods)
 {
 	int		padlen;
-	char	*new_str;
 	char	*pad;
 
 	padlen = mods.width - ft_strlen(tmp_str);
-	new_str = (char *)malloc(sizeof(char) * mods.width);
 	pad = (char *)malloc(sizeof(char) * padlen);
 	ft_memset(pad, ' ', padlen);
 	if (mods.flag != '\0')

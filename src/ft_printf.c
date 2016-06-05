@@ -103,5 +103,5 @@ int			ft_printf(char *format, ...)
 		format++;
 	}
 	va_end(vlst);
-	return (ft_strlen(out));
+	return (0);
 }
