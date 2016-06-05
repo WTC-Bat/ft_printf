@@ -58,7 +58,7 @@ static char	*get_fmtl(char *fstr)
 	return (fmtl);
 }
 
-static char	*arg_build(va_list vlst, char *fstr)
+static char	*arg_build(va_list vlst, char *fstr, int *pcnt)
 {
 	char	*out;
 	t_mods	mods;
@@ -74,6 +74,7 @@ static char	*arg_build(va_list vlst, char *fstr)
 		mods.flag = fstr[0];
 	mods.fmtl = get_fmtl(fstr);
 	out = handle_type_1(vlst, mods);
+	*pcnt += ft_strlen(out);
 	return (out);
 }
 
@@ -93,7 +94,7 @@ int			ft_printf(char *format, ...)
 				ft_putchar('%');
 			else
 			{
-				ft_putstr(arg_build(vlst, fstr_build(format)));
+				ft_putstr(arg_build(vlst, fstr_build(format), &cnt));
 				format += ft_strlen(fstr_build(format)) - 1;
 			}
 		}
@@ -103,34 +104,5 @@ int			ft_printf(char *format, ...)
 		cnt++;
 	}
 	va_end(vlst);
-	return (0);
+	return (cnt);
 }
-
-/*
-int			ft_printf(char *format, ...)
-{
-	va_list	vlst;
-	char	*out;
-
-	va_start(vlst, format);
-	while (*format != '\0')
-	{
-		if (*format == '%')
-		{
-			format++;
-			if (*format == '%')
-				ft_putchar('%');
-			else
-			{
-				ft_putstr(out = arg_build(vlst, fstr_build(format)));
-				format += ft_strlen(fstr_build(format)) - 1;
-			}
-		}
-		else
-			ft_putchar(*format);
-		format++;
-	}
-	va_end(vlst);
-	return (0);
-}
-*/
