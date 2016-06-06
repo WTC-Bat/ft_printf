@@ -116,11 +116,14 @@ int		main(void)
 	 * p format (pointer address)
 	 */
 	//ft_printf("'p' format:\n\n");
-    
+   
+  	char		*str = "Cheese";
 	ft_printf("Pointer: %p\n", "Cheese");
 	printf("Pointer: %p\n", "Cheese");
-	ft_printf("Pointer & Width: ||%11p||\n", "Cheese");
-	printf("Pointer & Width: ||%11p||\n", "Cheese");
+	ft_printf("Pointer & Width: ||%11p||\n", str);
+	printf("Pointer & Width: ||%11p||\n", str);
+	ft_printf("Pointer & Width: ||%11p||\n", &str);
+	printf("Pointer & Width: ||%11p||\n", &str);
 	ft_printf("Pointer & Width & Flag: ||%-11p||\n", "Cheese");
 	printf("Pointer & Width & Flag: ||%-11p||\n", "Cheese");
 	ft_printf("\n\n\n");
