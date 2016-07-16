@@ -8,27 +8,27 @@ int		main(void)
 	 * String literals
 	 */
 	//ft_printf("String literals:\n\n");
-    
+
 	ft_printf("Plain string literal\n");
 	printf("Plain string literal\n");
 	ft_printf("\n\n\n");
-    
-	
+
+
 	/*
 	 * Print Percentage
      */
-    
+
 	ft_printf("Percentage:\n\n");
 	ft_printf("Working at %i%%\n", 99);
 	printf("Working at %i%%\n", 99);
 	ft_printf("\n\n\n");
-    
+
 
 	/*
 	 * s format (char *)
      */
 	//ft_printf("'s' format:\n\n");
-    
+
 	ft_printf("'-' Flag, Width & Precision: ||%-16.3s||\n", "Cheese");
 	printf("'-' Flag, Width & Precision: ||%-16.3s||\n", "Cheese");
 	ft_printf("Width & Precision: ||%16.3s||\n", "Cheese");
@@ -40,7 +40,7 @@ int		main(void)
 	ft_printf("'-' Flag & Width: ||%-16s||\n", "Cheese");
 	printf("'-' Flag & Width: ||%-16s||\n", "Cheese");
 	ft_printf("\n\n\n");
-    
+
 
 	/*
 	 * ls length+format (wchar_t *)
@@ -60,11 +60,11 @@ int		main(void)
 
 	/*
 	 * S format (wchar_t *)
-	 * In the standard printf, using precision with the 'S' 
+	 * In the standard printf, using precision with the 'S'
 	 * 	specifier results in undefined behaviour
 	 */
 	//ft_printf("'S' format:\n\n");
-    
+
 	ft_printf("Flag, Width & Precision: %-16.3S!\n", L"Cheese");
 	//printf("Flag, Width & Precision: %-16.3S!\n", L"Cheese");
 	ft_printf("Width & Precision: %16.3S\n", L"Cheese");
@@ -74,20 +74,20 @@ int		main(void)
 	ft_printf("Flag & Width: %-16S!\n", L"Cheese");
 	printf("Flag & Width: %-16S!\n", L"Cheese");
 	ft_printf("\n\n\n");
-    
+
 
 	/*
 	 * c format (char)
 	 */
 	//ft_printf("'c' format:\n\n");
-    
+
 	ft_printf("Flag & Width: %-16c!\n", 'Z');
 	printf("Flag & Width: %-16c!\n", 'Z');
 	ft_printf("Width: %16c!\n", 'Z');
 	printf("Width: %16c!\n", 'Z');
 	ft_printf("\n\n\n");
-    
-	
+
+
 	/*
 	 * lc format (wchar_t)
 	 */
@@ -104,20 +104,30 @@ int		main(void)
 	 * C format (wchar_t)
      */
 	//ft_printf("'C' format:\n\n");
-    
+
 	ft_printf("Flag & Width: %-16C!\n", L'Z');
 	printf("Flag & Width: %-16C!\n", L'Z');
 	ft_printf("Width: %16C!\n", L'Z');
 	printf("Width: %16C!\n", L'Z');
 	ft_printf("\n\n\n");
-    
+
 
 	/*
 	 * p format (pointer address)
 	 */
 	//ft_printf("'p' format:\n\n");
-   
+
   	char		*str = "Cheese";
+	ft_printf("Pointer: %p\n", "Cheese");
+	printf("Pointer: %p\n", "Cheese");
+	ft_printf("Pointer & Width: ||%11p||\n", (void *)str);
+	printf("Pointer & Width: ||%11p||\n", (void *)str);
+	ft_printf("Pointer & Width: ||%11p||\n", &str);
+	printf("Pointer & Width: ||%11p||\n", &str);
+	ft_printf("Pointer & Width & Flag: ||%-11p||\n", "Cheese");
+	printf("Pointer & Width & Flag: ||%-11p||\n", "Cheese");
+	ft_printf("\n\n\n");
+	/*
 	ft_printf("Pointer: %p\n", "Cheese");
 	printf("Pointer: %p\n", "Cheese");
 	ft_printf("Pointer & Width: ||%11p||\n", str);
@@ -127,13 +137,14 @@ int		main(void)
 	ft_printf("Pointer & Width & Flag: ||%-11p||\n", "Cheese");
 	printf("Pointer & Width & Flag: ||%-11p||\n", "Cheese");
 	ft_printf("\n\n\n");
-    
-	
+	*/
+
+
 	/*
 	 * i format (int)
 	 */
 	//ft_printf("'i' format:\n\n");
-    
+
 	ft_printf("Plain Int: %i\n", 424242);
 	printf("Plain Int: %i\n", 424242);
 	ft_printf("' ' Flag: ||% i||\n", 42);
@@ -163,8 +174,8 @@ int		main(void)
 	ft_printf("Precision & ' ' Flag: % .10i\n", 42);
 	printf("Precision & ' ' Flag: % .10i\n", 42);
 	ft_printf("\n\n\n");
-    
-	
+
+
 	/*
 	 * zi format (size_t)
 	 */
@@ -198,7 +209,7 @@ int		main(void)
 	printf("Precision & ' ' Flag: % .10zi\n", sizeof(1423));
 	f t_printf("\n\n\n");
     */
-	
+
 	/*
 	 * ji format (intmax_t)
 	 */
@@ -232,7 +243,7 @@ int		main(void)
 	printf("Precision & ' ' Flag: % .10ji\n", (intmax_t)1423);
 	ft_printf("\n\n\n");
     */
-	
+
 	/*
 	 * hi format (short int)
 	 */
@@ -270,7 +281,7 @@ int		main(void)
 	printf("Precision & ' ' Flag: % .10hi\n", 42);
 	ft_printf("\n\n\n");
     */
-	
+
 	/*
 	 * hhi format (signed char)
 	 */
@@ -304,7 +315,7 @@ int		main(void)
 	printf("Precision & ' ' Flag: % .10hhi\n", 42);
 	ft_printf("\n\n\n");
     */
-	
+
 	/*
 	 * li format (long int)
 	 */
@@ -338,7 +349,7 @@ int		main(void)
 	printf("Precision & ' ' Flag: % .10li\n", 42l);
 	ft_printf("\n\n\n");
     */
-	
+
 	/*
 	 * lli format (long long int)
 	 */
@@ -372,7 +383,7 @@ int		main(void)
 	printf("Precision & ' ' Flag: % .10lli\n", 42ll);
 	ft_printf("\n\n\n");
     */
-	
+
 	/*
 	 * D format (long int)
 	 */
@@ -393,14 +404,14 @@ int		main(void)
 	ft_printf("Precision & ' ' Flag: % .10D\n", 42l);
 	ft_printf("\n\n\n");
 	*/
-	
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	/*
 	 * u format (uint)
 	 */
 	//ft_printf("'u' format:\n\n");
-    
+
 	ft_printf("Plain UInt: %u\n", 424242);
 	printf("Plain UInt: %u\n", 424242);
 	ft_printf("Width: ||%10u||\n", 42);
@@ -418,13 +429,13 @@ int		main(void)
 	ft_printf("Precision: %.10u\n", 42);
 	printf("Precision: %.10u\n", 42);
 	ft_printf("\n\n\n");
-    
-	
+
+
 	/*
 	 * zu format (size_t)
 	 */
     //ft_printf("'zu' format:\n\n");
-    
+
 	ft_printf("Plain Size_T: %zu\n", sizeof(1423));
 	printf("Plain Size_T: %zu\n", sizeof(1423));
 	ft_printf("Width: ||%10zu||\n", sizeof(1423));
@@ -438,8 +449,8 @@ int		main(void)
 	ft_printf("Precision: %.10zu\n", sizeof(1423));
 	printf("Precision: %.10zu\n", sizeof(1423));
 	ft_printf("\n\n\n");
-    
-	
+
+
 	/*
 	 * ju format (intmax_t)
 	 */
@@ -459,7 +470,7 @@ int		main(void)
 	printf("Precision: %.10ju\n", (intmax_t)1423);
 	ft_printf("\n\n\n");
     */
-	
+
 	/*
 	 * hu format (unsigned short int)
 	 */
@@ -483,7 +494,7 @@ int		main(void)
 	printf("Precision: %.10hu\n", 42);
 	ft_printf("\n\n\n");
     */
-	
+
 	/*
 	 * hhu format (unsigned char)
 	 */
@@ -503,7 +514,7 @@ int		main(void)
 	printf("Precision: %.10hhu\n", 42);
 	ft_printf("\n\n\n");
     */
-	
+
 	/*
 	 * lu format (unsigned long int)
 	 */
@@ -525,7 +536,7 @@ int		main(void)
 	printf("Precision: %.10lu\n", 42l);
 	ft_printf("\n\n\n");
     */
-	
+
 	/*
 	 * llu format (unsigned long long int)
 	 */
@@ -547,7 +558,7 @@ int		main(void)
 	printf("Precision: %.10llu\n", 42ll);
 	ft_printf("\n\n\n");
 	*/
-	
+
 	/*
 	 * U format (unsigned long int)
 	 */
@@ -590,7 +601,7 @@ int		main(void)
 	ft_printf("Precision & '#' Flag: %#.10o\n", 1988);
 	printf("Precision & '#' Flag: %#.10o\n", 1988);
 	ft_printf("\n\n\n");
- 
+
 
 	/*
 	 * lo format (ulong octal)
@@ -618,12 +629,12 @@ int		main(void)
 	ft_printf("Precision & '#' Flag: %#.10lo\n", 1988lu);
 	printf("Precision & '#' Flag: %#.10lo\n", 1988lu);
 	ft_printf("\n\n\n");
-    
-	
-	
+
+
+
 	/*
 	 * O format (ulong octal)
-	 */	
+	 */
 	//ft_printf("'O' format:\n\n");
 
 	ft_printf("Plain ULong Octal: %O\n", 1988lu);
@@ -647,8 +658,8 @@ int		main(void)
 	ft_printf("Precision & '#' Flag: %#.10O\n", 1988lu);
 	printf("Precision & '#' Flag: %#.10lo\n", 1988lu);
 	ft_printf("\n\n\n");
-    
-	
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	/*
@@ -677,8 +688,8 @@ int		main(void)
 	ft_printf("Precision & '#' Flag: %#.10x\n", 1988);
 	printf("Precision & '#' Flag: %#.10x\n", 1988);
 	ft_printf("\n\n\n");
-    
-	
+
+
 	/*
 	 * X format (hex)
 	 */
@@ -705,19 +716,19 @@ int		main(void)
 	ft_printf("Precision & '#' Flag: %#.10X\n", 1988);
 	printf("Precision & '#' Flag: %#.10X\n", 1988);
 	ft_printf("\n\n\n");
-    
-	
+
+
 	//printf("x: %#x\n", 42);
 	//printf("X: %#X\n", 42);
-	
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	/*std printf tests*/
-	
+
 	//char *sptr1 = "Cheese";
 	//printf("Int: |%.3i|\n", 42);
 	//printf("Int: |%03i|\n", 42);
-	
+
 	/*
 	printf("Printf Tests:\n\n");
 	printf("Print the first 5 characters (Hello) of \"Hello World\": %.*s\n", 5, "Hello World");
@@ -732,7 +743,7 @@ int		main(void)
 	printf("42 with explicit 0 left padding of 10: %012i!\n", 42);
 	//printf("42 with specified 0 right padding of 10: %-0*i!\n", 12, 42);
 	//printf("42 with explicit 0 right padding of 10: %-012i!\n", 42);
-	
+
 	printf("Value as hex (lower case): %x\n", 42);
 	printf("Value as hex (upper case): %X\n", 42);
 	printf("Value as hex (lower case) preceded by 0x: %#x\n", 42);

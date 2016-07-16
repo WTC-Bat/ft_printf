@@ -14,13 +14,13 @@
 
 char	*handle_p(va_list vlst, t_mods mods)
 {
-	unsigned long	ptr;
-	char			*out_str;
+	uintptr_t	ptr;
+	char	*out_str;
 
 	out_str = NULL;
 	if (ft_strlen(mods.fmtl) > 1)
 		return ("ERROR: 'p' takes no length modifier\n");
-	ptr = va_arg(vlst, unsigned long);
+	ptr = va_arg(vlst, uintptr_t);
 	out_str = ft_itobase(ptr, 16);
 	out_str = ft_prependc(out_str, 'x');
 	out_str = ft_prependc(out_str, '0');
